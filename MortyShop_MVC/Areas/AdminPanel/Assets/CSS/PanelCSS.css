@@ -1,0 +1,47 @@
+﻿body {
+    background-color: #F4F7FB;
+    color: #1A237E;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+.menuLinks{
+    margin-left:30px;
+}
+    .menuLinks label {
+        display:block;
+        margin-top: 20px;
+        font-size: 12pt;
+        color:gray;
+    }
+a {
+    color: #e9f1fb;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0 0 30px;
+    font-size: 15pt;
+}
+
+    a:hover {
+        color: #00E5FF;
+        text-decoration: underline;
+    }
+.leftMenu {
+    float:left;
+    min-height: 1000px;
+    width: 300px;
+    background-color: #0D1B2A;
+}
+.logo{
+    width:250px;
+    margin-left:25px;
+}
+.clearfix{
+    clear:both;
+}
+.mainContainer {
+    width: 1500px;
+    float: left;
+    padding: 30px;
+}
+

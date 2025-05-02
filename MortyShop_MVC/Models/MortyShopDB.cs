@@ -10,8 +10,13 @@ namespace MortyShop_MVC.Models
         public MortyShopDB()
             : base("name=MortyShopDB")
         {
+
         }
 
+        public DbSet<ManagerRole> ManagerRoles { get; set; }
+        public DbSet<Manager> Managers { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

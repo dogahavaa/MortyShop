@@ -1,0 +1,83 @@
+﻿@using MortyShop_MVC.Models
+@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+    MortyShopDB db = new MortyShopDB();
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+
+
+<div class="container large">
+    <div class="pageTitle">
+        <h2>Kategoriler</h2>
+    </div>
+    <div class="content">
+        <div class="info">
+            @if (TempData["message"] != null)
+            {
+                <label class="infoMessage">@TempData["message"]</label>
+            }
+        </div>
+        <table class="table" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Kategori Adı</th>
+                <th>Üst Kategorisi</th>
+                <th>Durum</th>
+                <th style="padding-left:25px;">Seçenekler</th>
+            </tr>
+            @foreach (Category c in Model)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>
+                        @{
+                            Category category = db.Categories.Find(c.UpCategoryID);
+                            if (category != null)
+                            {
+                                <label>@category.Name</label>
+                            }
+                            else
+                            {
+                                <label>Ana Kategori</label>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if (c.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Category", new { id = c.ID })" , class="iconButton edit" title="Düzenle">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Delete", "Category", new { id = c.ID})" , class="iconButton delete" title="Sil">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Change", "Category", new { id = c.ID})" , class="iconButton change" title="Aktiflik durumunu değiştir.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/toggle-icon.png" />
+                        </a>
+                        <a href="@Url.Action("List", "Category", new { id = c.ID})" , class="iconButton list"  title="Bu kategoriye ait ürünleri listele">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/list-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Destroy", "Category", new { id = c.ID})" , class="iconButton destroy" title="Yok Et! Bu işlem geri alınamaz.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

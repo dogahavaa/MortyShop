@@ -1,0 +1,126 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0px;
+}
+body {
+    background-color: #0D1B2A;
+    color: #E0E0E0;
+    font-family: 'Poppins', sans-serif;
+}
+.formContainer {
+    margin: 250px auto;
+    width: 864px;
+    height: 400px;
+    color: #E0E0E0;
+    border: 1px solid #F8E753;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px rgba(0, 229, 255, 0.2);
+}
+.left {
+    width: 400px;
+    float: left;
+    border-right: 1px solid #F8E753;
+}
+.right {
+    width: 400px;
+    float: left;
+    margin-top:70px;
+    padding:0 30px;
+}
+.row{
+    margin:8px 0;
+}
+.box {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid silver;
+    box-shadow: 0 2px 10px rgba(0, 229, 255, 0.2);
+}
+.loginButton {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    font-size: 15pt;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #F8E753;
+    color: #0D1B2A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+    .loginButton:hover {
+        cursor:pointer;
+        background-color: #00E5FF;
+        box-shadow: 0 0 10px #00E5FF;
+    }
+
+.validationMessage {
+    color: #FF1744;
+}
+
+
+
+
+/*
+Ürün kartı
+    .product-card {
+    background-color: #FFF8E1;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+    .product-card:hover {
+        border-color: #D500F9;
+        box-shadow: 0 0 10px #D500F9;
+        transform: translateY(-5px);
+    }*/
+
+/*Stokta kalmadı
+.out-of-stock {
+    background-color: #FF1744;
+    color: #E0E0E0;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+}*/
+
+/*sil butornu
+.btn-remove {
+    background-color: #FF1744;
+    color: #E0E0E0;
+    border: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #D500F9;*/ /* Mor ışıltıya geçiş */
+/*}*/
+
+/*kampanya bannerları
+.campaign-banner {
+    background: linear-gradient(45deg, #0D1B2A, #1A237E);
+    color: #E0E0E0;
+    padding: 20px;
+    border: 2px solid #D500F9;
+    position: relative;
+}
+
+.campaign-banner .highlight {
+    color: #39FF14;
+    font-weight: bold;
+}*/
+/*
+Galaktik Siyah #0D1B2A Ana arka plan, koyu tema
+Morty’nin Yumuşak Sarısı #FFF8E1 Ürün kartları, hafif arka planlar
+Rick’in Neon Yeşili #39FF14 Butonlar, vurgular
+Morty’nin Elektrik Mavisi #00E5FF Linkler, hover efektleri
+Plumbus’un Çılgın Kırmızısı #FF1744 Hata mesajları, eğlenceli vurgular
+Uzay Beyazı #E0E0E0 Ana metin, başlıklar
+Rick’in Mor Işıltısı #D500F9 İkincil vurgu, detaylar*/

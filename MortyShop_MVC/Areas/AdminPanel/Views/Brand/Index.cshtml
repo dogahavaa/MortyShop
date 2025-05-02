@@ -1,0 +1,69 @@
+﻿@using MortyShop_MVC.Models
+@model IEnumerable<Brand>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+<div class="container large">
+    <div class="pageTitle">
+        <h2>Markalar</h2>
+    </div>
+    <div class="content">
+        <div class="info">
+            @if (TempData["message"] != null)
+            {
+                <label class="infoMessage">@TempData["message"]</label>
+            }
+        </div>
+        <table class="table" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Logo</th>
+                <th>Marka</th>
+                <th>Durum</th>
+                <th style="padding-left:25px;">Seçenekler</th>
+            </tr>
+            @foreach (Brand b in Model)
+            {
+                <tr>
+                    <td class="logoArea">
+                        <img src="~/Assets/Images/BrandImages/@b.Logo" style="width:100%" />
+                    </td>
+                    <td>@b.Name</td>
+                    <td>
+                        @{
+                            if (b.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Brand", new { id = b.ID })" , class="iconButton" title="Düzenle">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Delete", "Brand", new { id = b.ID})" , class="iconButton" title="Sil">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Change", "Brand", new { id = b.ID})" , class="iconButton" title="Aktiflik durumunu değiştir.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/toggle-icon.png" />
+                        </a>
+                        <a href="@Url.Action("List", "Brand", new { id = b.ID})" , class="iconButton" title="Markanın ürünlerini listele">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/list-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Destroy", "Brand", new { id = b.ID})" , class="iconButton" title="Yok Et! Bu işlem geri alınamaz.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿body {
+    background-color: #F4F7FB; /*Arkaplan açık gri*/
+    color: #1A237E; /*Genel yazı rengi, Siyaha yakın*/
+    color: #0D1B2A; /*Başlıklar, Gece mavisi, Koyu lacivert*/
+    background-color: #00E5FF; /*Buton rengi, Açık mavi*/
+    background-color: #F8E753; /*Buton hover, Koyu sarı*/
+    box-shadow: 0 0 10px #F8E753; /*Buton hover parlama efekti, Koyu sarı*/
+    color: #FF4444; /*Uyarı mesajı*/
+}

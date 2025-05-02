@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Areas/AdminPanel/Assets/CSS/PanelCSS.css" rel="stylesheet" />
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div class="leftMenu">
+        <div class="logo">
+            <img src="~/Assets/Images/mortyshop_logo.png" style="width:100%" />
+        </div>
+        <div class="menuLinks">
+            <label>Yönetim</label>
+            <a href="@Url.Action("Index","Home")">Anasayfa</a>
+            <a href="@Url.Action("Logout","Login")">Çıkış Yap</a>
+            <label>Kategori</label>
+            <a href="@Url.Action("Index","Category")">Kategori Listele</a>
+            <a href="@Url.Action("Create","Category")">Kategori Ekle</a>
+            <label>Marka</label>
+            <a href="@Url.Action("Index","Brand")">Marka Listele</a>
+            <a href="@Url.Action("Create","Brand")">Marka Ekle</a>
+            <label>Ürün</label>
+            <a href="@Url.Action("Index","Product")">Ürün Listele</a>
+            <a href="@Url.Action("Create","Product")">Ürün Ekle</a>
+        </div>
+    </div>
+    <div class="mainContainer">
+        @RenderBody()
+    </div>
+    <div class="clearfix"></div>
+</body>
+</html>

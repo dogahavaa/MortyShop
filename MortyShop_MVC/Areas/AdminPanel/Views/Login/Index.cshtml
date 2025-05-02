@@ -1,0 +1,54 @@
+﻿@model MortyShop_MVC.Areas.AdminPanel.Data.ManagerLoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yönetici Girişi</title>
+    <link href="~/Areas/AdminPanel/Assets/CSS/ManagerLoginCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="formContainer">
+        <div class="left">
+            <div class="logo">
+                <img src="~/Assets/Images/mortyshop_logo.png" style="width:98%" />
+            </div>
+        </div>
+        <div class="right">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                if (ViewBag.mesaj != null)
+                {
+                    <div class="validation-summary-errors">
+                        @ViewBag.mesaj
+                    </div>
+                }
+
+                <div class="row">
+                    Kullanıcı Adı<br />
+                    @Html.EditorFor(x => x.Username, "", new { htmlAttributes = new { @class = "box" } })
+                    @Html.ValidationMessageFor(x => x.Username, "", new {@class = "validationMessage"})
+                </div>
+                <div class="row">
+                    Şifre<br />
+                    @Html.EditorFor(x => x.Password, "", new { htmlAttributes = new { @class = "box" } })
+                    @Html.ValidationMessageFor(x => x.Password, "", new { @class = "validationMessage" })
+                </div>
+                <div class="row">
+                    @Html.EditorFor(x => x.RememberMe) <label for="RememberMe">Beni Hatırla</label>
+                </div>
+                <div class="row" style="margin-top:20px;">
+                    <input type="submit" value="Giriş Yap" class="loginButton" />
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+</html>

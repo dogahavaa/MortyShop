@@ -1,0 +1,40 @@
+﻿@model MortyShop_MVC.Models.Brand
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+<div class="container small">
+    @using (Html.BeginForm("Edit", "Brand", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(x => x.ID);
+        <div class="pageTitle">
+            <h2>Marka Düzenle</h2>
+        </div>
+        <div class="content">
+            @if (ViewBag.message != null)
+            {
+                <label class="warningMessage">@ViewBag.message</label>
+            }
+            <div class="row">
+                Marka İsmi
+                @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Name, "", new { @class = "warningMessage" })
+            </div>
+            <div class="row">
+                Logo
+                <input type="file" name="logo" class="box" />
+            </div>
+            <div class="row">
+                @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })
+                <label for="isActive"> Aktif Marka</label>
+            </div>
+            <div class="row">
+                <button type="submit" class="formButton">Marka Düzenle</button>
+            </div>
+        </div>
+    }
+</div>

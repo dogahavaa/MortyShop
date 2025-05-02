@@ -1,0 +1,42 @@
+﻿@model MortyShop_MVC.Models.Category
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+
+
+<div class="container small">
+    @using (Html.BeginForm())
+    {
+    <div class="pageTitle">
+        <h2>Kategori Ekle</h2>
+    </div>
+    <div class="content">
+        @if (ViewBag.message != null)
+        {
+            <label class="warningMessage">@ViewBag.message</label>
+        }
+        <div class="row">
+            Kategori İsmi
+            @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "box" } })
+            @Html.ValidationMessageFor(x => x.Name, "", new { @class = "warningMessage" })
+        </div>
+        <div class="row">
+            Ana Kategorisi
+            @Html.DropDownList("DDLSecenekleri", (IEnumerable<SelectListItem>)ViewBag.DDLSecenekleri, new { @class = "box" })
+            
+        </div>
+        <div class="row">
+            @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })
+            <label for="isActive"> Aktif Kategori</label>
+        </div>
+        <div class="row">
+            <button type="submit" class="formButton">Kategori Ekle</button>
+        </div>
+    </div>
+    }
+</div>
