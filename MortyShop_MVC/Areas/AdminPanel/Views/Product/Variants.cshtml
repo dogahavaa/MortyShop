@@ -47,14 +47,11 @@
                     <td>@pcvm.VariantValue</td>
                     <td>@pcvm.Stock</td>
                     <td style="width:100px;">
-                        <a href="@Url.Action("VariantEdit", "Product", new { id = pcvm.Product.ID })" , class="iconButton edit" title="Düzenle">
-                            <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
+                        <a href="@Url.Action("VariantEdit", "Product", new { productVariantID = pcvm.ProductVariantID })" , class="iconButton edit" title="Stok düzenle">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/stock.png" />
                         </a>
                         <a href="@Url.Action("VariantDelete", "Product", new { id = pcvm.Product.ID})" , class="iconButton delete" title="Sil">
                             <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
-                        </a>
-                        <a href="@Url.Action("VariantDestroy", "Product", new { id = pcvm.Product.ID})" , class="iconButton destroy" title="Yok Et! Bu işlem geri alınamaz.">
-                            <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />
                         </a>
                     </td>
                 </tr>

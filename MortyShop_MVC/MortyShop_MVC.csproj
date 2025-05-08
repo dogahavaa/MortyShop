@@ -156,6 +156,7 @@
     <Content Include="Areas\AdminPanel\Views\Brand\List.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Product\AddVariant.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Product\Variants.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\VariantEdit.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -11,6 +11,6 @@
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Brand",
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product"
   ],
-  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Create.cshtml",
+  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
   "PreviewInSolutionExplorer": false
 }

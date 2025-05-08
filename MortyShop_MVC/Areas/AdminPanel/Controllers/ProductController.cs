@@ -302,6 +302,7 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
             {
                 ProductCreateViewModel pcvm = new ProductCreateViewModel();
                 pcvm.Product = p;
+                pcvm.ProductVariantID = pv.ID;
                 pcvm.VariantType = pv.Variant.VariantType;
                 pcvm.VariantValue = pv.Variant.VariantValue;
                 pcvm.Stock = pv.Stock;
@@ -310,10 +311,65 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
             return View(products);
         }
 
-        //public ActionResult VariantEdit()
-        //{
+        [HttpGet]
+        public ActionResult VariantEdit(int? productVariantID)
+        {
+            if (productVariantID != null)
+            {
+                ProductCreateViewModel pcvm = new ProductCreateViewModel();
+                ProductVariant pv = db.ProductVariants.Find(productVariantID);
+                if (productVariantID != null)
+                {
+                    pcvm.VariantType = pv.Variant.VariantType;
+                    pcvm.VariantValue = pv.Variant.VariantValue.ToString();
+                    pcvm.Product = db.Products.Find(pv.ProductID);
+                    pcvm.Stock = pv.Stock;
+                    return View(pcvm);
+                }
+                else
+                {
+                    TempData["message"] = "Ürün varyasyonu bulunamadı";
+                    return RedirectToAction("Index", "Product");
+                }
+            }
+            else
+            {
+                TempData["message"] = "Ürün varyasyonu bulunamadı";
+                return RedirectToAction("Index", "Product");
+            }
+        }
 
-        //}
+        [HttpPost]
+        public ActionResult VariantEdit(ProductCreateViewModel model)
+        {
+            ProductVariant pv = db.ProductVariants.Find(model.ProductVariantID);
+            if (pv != null)
+            {
+                pv.Stock = model.Stock;
+                db.SaveChanges();
+                TempData["message"] = "Stok bilgisi başarıyla güncellendi.";
+                return RedirectToAction("Index", "Product");
+            }
+            VariantTypeF();
+            return View(model);
+        }
+
+        public ActionResult VariantDelete(int? productVariantID)
+        {
+            if (productVariantID == null)
+            {
+                TempData["message"] = "Ürüne ait varyasyon bulunamadı.";
+                return RedirectToAction("Index", "Product");
+            }
+            ProductVariant pv = db.ProductVariants.Find(productVariantID);
+            if (pv != null)
+            {
+                db.ProductVariants.Remove(pv);
+                db.SaveChanges();
+                TempData["message"] = "Ürün varyasyonu silindi.";
+            }
+            return RedirectToAction("Index", "Product");
+        }
 
 
         private void VariantTypeF()
