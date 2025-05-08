@@ -46,17 +46,17 @@
                         }
                     </td>
                     <td>
+                        <a href="@Url.Action("List", "Brand", new { id = b.ID})" , class="iconButton" title="Markanın ürünlerini listele">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/list-icon.png" />
+                        </a>
                         <a href="@Url.Action("Edit", "Brand", new { id = b.ID })" , class="iconButton" title="Düzenle">
                             <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
-                        </a>
-                        <a href="@Url.Action("Delete", "Brand", new { id = b.ID})" , class="iconButton" title="Sil">
-                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
                         </a>
                         <a href="@Url.Action("Change", "Brand", new { id = b.ID})" , class="iconButton" title="Aktiflik durumunu değiştir.">
                             <img src="~/Areas/AdminPanel/Assets/Icons/toggle-icon.png" />
                         </a>
-                        <a href="@Url.Action("List", "Brand", new { id = b.ID})" , class="iconButton" title="Markanın ürünlerini listele">
-                            <img src="~/Areas/AdminPanel/Assets/Icons/list-icon.png" />
+                        <a href="@Url.Action("Delete", "Brand", new { id = b.ID})" , class="iconButton" title="Sil">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
                         </a>
                         <a href="@Url.Action("Destroy", "Brand", new { id = b.ID})" , class="iconButton" title="Yok Et! Bu işlem geri alınamaz.">
                             <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />

@@ -18,7 +18,7 @@ namespace MortyShop_MVC.Models
         public virtual Category UpCategory { get; set; }
         [InverseProperty("UpCategory")]
         public virtual ICollection<Category> SubCategories { get; set; } = new List<Category>();
-        //public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
     }

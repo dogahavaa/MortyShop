@@ -1,0 +1,65 @@
+﻿@using MortyShop_MVC.Areas.AdminPanel.Data
+@model IEnumerable<ProductCreateViewModel>
+@{
+    ViewBag.Title = "Ürün Varyasyonları";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+
+<div class="container medium">
+    <div class="pageTitle">
+        <h2>Varyasyonlar</h2>
+    </div>
+    <div class="content">
+        <div class="info">
+            @if (TempData["message"] != null)
+            {
+                <label class="infoMessage">@TempData["message"]</label>
+            }
+        </div>
+        <table class="table" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Tipi</th>
+                <th>Değeri</th>
+                <th>Stok</th>
+                <th style="padding-left:25px;">Seçenekler</th>
+            </tr>
+            @foreach (ProductCreateViewModel pcvm in Model)
+            {
+                <tr>
+                    <td>@pcvm.Product.Name</td>
+                    <td>
+                        @{
+                            if (pcvm.VariantType == "1")
+                            {
+                                <label>Beden</label>
+                            }
+                            else
+                            {
+                                <label>Numara</label>
+                            }
+                        }
+                    </td>
+                    <td>@pcvm.VariantValue</td>
+                    <td>@pcvm.Stock</td>
+                    <td style="width:100px;">
+                        <a href="@Url.Action("VariantEdit", "Product", new { id = pcvm.Product.ID })" , class="iconButton edit" title="Düzenle">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
+                        </a>
+                        <a href="@Url.Action("VariantDelete", "Product", new { id = pcvm.Product.ID})" , class="iconButton delete" title="Sil">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
+                        </a>
+                        <a href="@Url.Action("VariantDestroy", "Product", new { id = pcvm.Product.ID})" , class="iconButton destroy" title="Yok Et! Bu işlem geri alınamaz.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

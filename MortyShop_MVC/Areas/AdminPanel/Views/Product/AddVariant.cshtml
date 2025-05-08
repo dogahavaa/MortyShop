@@ -1,0 +1,41 @@
+﻿@model MortyShop_MVC.Areas.AdminPanel.Data.ProductCreateViewModel
+@{
+    ViewBag.Title = "Mortyshop - Ürün Ekle";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+<div class="container small">
+    @using (Html.BeginForm())
+    {
+        <div class="pageTitle">
+            <h2>Varyasyon Ekle</h2>
+        </div>
+        <div class="content">
+            @if (ViewBag.message != null)
+            {
+                <label class="warningMessage">@ViewBag.message</label>
+            }
+            @Html.HiddenFor(x => x.Product.ID)
+            <div class="row">
+                <p class="box">@Model.Product.Name</p>
+            </div>
+            <div class="row">
+                @Html.Partial("_Variant", Model)
+            </div>
+
+            <div class="row">
+                @Html.Partial("_Stock", Model)
+            </div>
+
+            <div class="row">
+                <button type="submit" class="formButton">Varyasyon Ekle</button>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    }
+</div>

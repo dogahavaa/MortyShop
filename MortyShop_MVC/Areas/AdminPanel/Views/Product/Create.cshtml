@@ -1,0 +1,83 @@
+﻿@model MortyShop_MVC.Areas.AdminPanel.Data.ProductCreateViewModel
+@{
+    ViewBag.Title = "Mortyshop - Ürün Ekle";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+<div class="container medium">
+    @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="pageTitle">
+            <h2>Yeni Ürün</h2>
+        </div>
+        <div class="content">
+            @if (ViewBag.message != null)
+            {
+                <label class="warningMessage">@ViewBag.message</label>
+            }
+        <div class="left">
+            <div class="row">
+                Barkod Numarası
+                @Html.EditorFor(x => x.Product.BarcodeNo, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Product.BarcodeNo, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                Ürün İsmi
+                @Html.EditorFor(x => x.Product.Name, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Product.Name, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                Açıklama
+                @Html.EditorFor(x => x.Product.Description, new { htmlAttributes = new { @class = "box" } })
+            </div>
+
+            <div class="row">
+                Resim
+                <input type="file" name="image" class="box" />
+            </div>
+
+            <div class="row">
+                Kategori
+                @Html.DropDownList("CategoryID", null, new { @class = "box" })
+            </div>
+
+            <div class="row">
+                Marka
+                @Html.DropDownList("BrandID", null, new { @class = "box" })
+            </div>
+        </div>
+
+        <div class="right">
+
+            <div class="row">
+                @Html.Partial("_Variant", Model)
+            </div>
+
+            <div class="row">
+                @Html.Partial("_Stock", Model)
+            </div>
+
+            <div class="row">
+                Fiyat
+                @Html.EditorFor(x => x.Product.Price, new { htmlAttributes = new { @class = "box" } })
+            </div>
+
+            <div class="row">
+                @Html.EditorFor(x => x.Product.IsActive, new { htmlAttributes = new { @id = "isActive" } })
+                <label for="isActive"> Aktif Ürün</label>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="formButton">Ürün Ekle</button>
+            </div>
+        </div>
+            <div class="clearfix"></div>
+        </div>
+    }
+</div>

@@ -29,6 +29,9 @@ body {
 .large{
     width:1200px;
 }
+.xlarge{
+    width:1550px;
+}
 .content{
     padding:15px 40px;
 }
@@ -99,4 +102,22 @@ body {
     }
 .logoArea{
     width:100px;
+}
+.left{
+    float:left;
+    width:300px;
+}
+.right {
+    float: left;
+    width: 300px;
+    margin-left: 75px;
+}
+.tdImage{
+    width:100px;
+    height:100px;
+}
+.fakePrice {
+    color: dimgray;
+    font-size: 11pt;
+    text-decoration: line-through
 }

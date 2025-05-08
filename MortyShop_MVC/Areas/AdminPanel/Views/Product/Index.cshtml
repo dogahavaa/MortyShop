@@ -1,0 +1,86 @@
+﻿@using MortyShop_MVC.Models
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+    MortyShopDB db = new MortyShopDB();
+}
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+
+<div class="container xlarge">
+    <div class="pageTitle">
+        <h2>Ürünler</h2>
+    </div>
+    <div class="content">
+        <div class="info">
+            @if (TempData["message"] != null)
+            {
+                <label class="infoMessage">@TempData["message"]</label>
+            }
+        </div>
+        <table class="table" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Resim</th>
+                <th>Barkod No</th>
+                <th>Ürün Adı</th>
+                <th>Marka</th>
+                <th>Kategori</th>
+                <th>Fiyat</th>
+                <th>İndirimli Fiyat</th>
+                <th>Durum</th>
+                <th style="padding-left:25px;">Seçenekler</th>
+            </tr>
+            @foreach (Product p in Model)
+            {
+                <tr>
+                    <td class="tdImage">
+                        <img src="~/Assets/Images/ProductImages/@p.Image" style="width:100%" />
+                    </td>
+                    <td>@p.BarcodeNo</td>
+                    <td>@p.Name</td>
+                    <td>@p.Brand.Name</td>
+                    <td>@p.Category.Name</td>
+                    <td class="fakePrice">@(Convert.ToInt32(p.Price) * 1.1) ₺</td>
+                    <td>@p.Price ₺</td>
+                    <td>
+                        @{
+                            if (p.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        }
+                    </td>
+
+                    <td style="width:100px;">
+                        <a href="@Url.Action("AddVariant", "Product", new { id = p.ID })" , class="iconButton edit" title="Varyasyonları göster">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/variants.png" />
+                        </a>
+                        <a href="@Url.Action("Variants", "Product", new { id = p.ID })" , class="iconButton edit" title="Varyasyonları göster">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/variants.png" />
+                        </a>
+                        <a href="@Url.Action("Edit", "Product", new { id = p.ID })" , class="iconButton edit" title="Düzenle">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/edit-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Change", "Product", new { id = p.ID})" , class="iconButton change" title="Aktiflik durumunu değiştir.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/toggle-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Delete", "Product", new { id = p.ID})" , class="iconButton delete" title="Sil">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/delete-icon.png" />
+                        </a>
+                        <a href="@Url.Action("Destroy", "Product", new { id = p.ID})" , class="iconButton destroy" title="Yok Et! Bu işlem geri alınamaz.">
+                            <img src="~/Areas/AdminPanel/Assets/Icons/destroy-icon.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

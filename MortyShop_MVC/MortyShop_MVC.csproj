@@ -102,7 +102,9 @@
     <Content Include="Areas\AdminPanel\Assets\CSS\ManagerLoginCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\CSS\PanelCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\Icons\edit-icon.png" />
+    <Content Include="Assets\Images\BrandImages\noImage.png" />
     <Content Include="Assets\Images\mortyshop_logo.png" />
+    <Content Include="Assets\Images\ProductImages\noImage.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -114,7 +116,9 @@
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\AdminPanel\Data\ManagerLoginModel.cs" />
+    <Compile Include="Areas\AdminPanel\Data\ProductCreateViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Filters\ManagerLoginRequiredFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -125,6 +129,9 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerRole.cs" />
     <Compile Include="Models\MortyShopDB.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductVariant.cs" />
+    <Compile Include="Models\Variant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +147,15 @@
     <Content Include="Areas\AdminPanel\Views\Brand\Create.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Brand\Index.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Brand\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\Create.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\_Variant.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\_Stock.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Category\List.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Brand\List.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\AddVariant.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Product\Variants.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -150,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\Images\BrandImages\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

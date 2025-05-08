@@ -1,0 +1,10 @@
+﻿@model MortyShop_MVC.Areas.AdminPanel.Data.ProductCreateViewModel
+
+<div class="row">
+    Varyasyon Tipi
+    @Html.DropDownList("VariantTypes", null, new { @class = "box" })
+</div>
+<div class="row">
+    Değer
+    @Html.EditorFor(x => x.VariantValue, new { htmlAttributes = new { @class = "box" } })
+</div>

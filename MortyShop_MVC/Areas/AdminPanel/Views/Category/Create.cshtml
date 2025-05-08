@@ -28,7 +28,6 @@
         <div class="row">
             Ana Kategorisi
             @Html.DropDownList("DDLSecenekleri", (IEnumerable<SelectListItem>)ViewBag.DDLSecenekleri, new { @class = "box" })
-            
         </div>
         <div class="row">
             @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })

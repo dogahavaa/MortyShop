@@ -5,8 +5,12 @@
     "\\MortyShop_MVC\\Areas",
     "\\MortyShop_MVC\\Areas\\AdminPanel",
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Assets",
-    "\\MortyShop_MVC\\Areas\\AdminPanel\\Assets\\CSS"
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Assets\\CSS",
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers",
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views",
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Brand",
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product"
   ],
-  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Assets\\CSS\\FormCSS.css",
+  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

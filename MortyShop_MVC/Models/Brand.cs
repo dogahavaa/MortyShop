@@ -22,6 +22,6 @@ namespace MortyShop_MVC.Models
 
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
-        //public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

@@ -1,0 +1,75 @@
+﻿@model MortyShop_MVC.Models.Product
+@{
+    ViewBag.Title = "Mortyshop - Ürün Ekle";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+
+<div class="container small">
+    @using (Html.BeginForm("Edit", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(x => x.ID)
+        @Html.HiddenFor(x => x.CategoryID)
+        @Html.HiddenFor(x => x.BrandID)
+        @Html.HiddenFor(x => x.CreationTime)
+        <div class="pageTitle">
+            <h2>Yeni Ürün</h2>
+        </div>
+        <div class="content">
+            @if (ViewBag.message != null)
+            {
+                <label class="warningMessage">@ViewBag.message</label>
+            }
+
+            <div class="row">
+                Barkod Numarası
+                @Html.EditorFor(x => x.BarcodeNo, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.BarcodeNo, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                Ürün İsmi
+                @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Name, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                Açıklama
+                @Html.EditorFor(x => x.Description, new { htmlAttributes = new { @class = "box" } })
+            </div>
+
+            <div class="row">
+                Resim
+                <input type="file" name="image" class="box" />
+            </div>
+
+            <div class="row">
+                Kategori
+                @Html.DropDownList("CategoryID", null, new { @class = "box" })
+            </div>
+
+            <div class="row">
+                Marka
+                @Html.DropDownList("BrandID", null, new { @class = "box" })
+            </div>
+
+            <div class="row">
+                Fiyat
+                @Html.EditorFor(x => x.Price, new { htmlAttributes = new { @class = "box" } })
+            </div>
+
+            <div class="row">
+                @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })
+                <label for="isActive"> Aktif Ürün</label>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="formButton">Düzenle</button>
+            </div>
+
+        </div>
+    }
+</div>

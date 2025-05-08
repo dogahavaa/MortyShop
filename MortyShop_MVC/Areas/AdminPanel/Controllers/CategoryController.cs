@@ -18,14 +18,12 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
             return View(db.Categories.Where(x => x.IsDeleted == false).ToList());
         }
 
-
         [HttpGet]
         public ActionResult Create()
         {
             DDLCategoryID();
             return View();
         }
-
         [HttpPost]
         public ActionResult Create(Category model, string DDLSecenekleri)
         {
@@ -125,7 +123,6 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
             }
             return RedirectToAction("Index", "Category");
         }
-
         public ActionResult Destroy(int? id)
         {
             if (id != null)
@@ -140,10 +137,31 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
             }
             return RedirectToAction("Index", "Category");
         }
+
         public ActionResult List(int? id)
         {
-            //Product oluşturduktan sonra hallet
-            return RedirectToAction("Index", "Home");
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                TempData["message"] = "Kategori bulunamadı.";
+                return RedirectToAction("Index", "Category");
+            }
+
+
+            //Alt kategorileri aldık
+            List<Category> categories = db.Categories.Where(x => category.ID == x.UpCategoryID && x.IsDeleted == false).ToList();
+
+            if (categories.Count > 0)
+            {
+                List<Product> products = new List<Product>();
+                foreach (Category c in categories) // Her bir kategorinin idsi ile ürün kategori idsini eşleştirerek products listesine ekledik
+                {
+                    List<Product> temp = db.Products.Where(x => x.CategoryID == c.ID && x.IsDeleted == false).ToList();
+                    products.AddRange(temp);
+                }
+                return View(products); //Gönderdik ve oldu babba
+            }
+            return View(db.Products.Where(x => x.CategoryID == category.ID && x.IsDeleted == false)); //Hiç alt kategorisi yoksa direkt bu çalışacak
         }
 
 

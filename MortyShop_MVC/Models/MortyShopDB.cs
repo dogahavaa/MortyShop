@@ -17,6 +17,9 @@ namespace MortyShop_MVC.Models
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Variant> Variants { get; set; }
+        public DbSet<ProductVariant> ProductVariants { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
