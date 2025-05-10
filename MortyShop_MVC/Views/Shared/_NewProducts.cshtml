@@ -1,0 +1,17 @@
+﻿@using MortyShop_MVC.Models
+
+@{
+    MortyShopDB db = new MortyShopDB();
+    List<Product> products = db.Products.Where(x => x.IsActive == true && x.IsDeleted == false && x.MonthlyPick == false).OrderBy(x => x.CreationTime).Take(4).ToList();
+}
+
+@foreach (Product item in products)
+{
+    <a href="@Url.Action("Details", "Product", new {id = item.ID})">
+        <div class="productImage">
+            <img src="~/Assets/Images/ProductImages/@item.Image" />
+        </div>
+        <span class="productName">@item.Name</span><br />
+        <span class="productPrice">@item.Price</span>
+    </a>
+}

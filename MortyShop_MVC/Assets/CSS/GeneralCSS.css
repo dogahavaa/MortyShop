@@ -1,0 +1,149 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0px;
+}
+body {
+    color: #1A237E;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+.topBar {
+    background-color: #0D1B2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    height: 60px;
+    margin: 0 auto;
+}
+.logo, .menu, .user {
+    flex: 1; /* Her div’in genişliğini eşit tutar, ama hizalama justify-content ile kontrol edilir */
+}
+.logo {
+    text-align: left;
+}
+    .logo img {
+        width: 150px;
+        vertical-align: middle;
+    }
+.user {
+    text-align: right;
+}
+.menu {
+    text-align: center;
+}
+.categoryList {
+    list-style-type: none;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0 auto;
+}
+    .categoryList li {
+        margin-left: 70px;
+    }
+
+        .categoryList li a {
+            text-decoration: none;
+            color: #F4F7FB;
+            font-size:18pt;
+        }
+
+            .categoryList li a:hover {
+                color: #00E5FF;
+                text-decoration: underline;
+            }
+
+.mainContainer {
+    margin: 30px auto;
+
+    padding: 20px;
+    box-sizing:border-box;
+}
+.container {
+    width: 100%; /* MainContainer’a göre tam genişlik */
+    max-width: 1400px; /* Maksimum genişlik */
+    margin: 100px auto;
+    
+}
+.title{
+    font-size:24pt;
+    font-weight:bold;
+    text-align:center;
+}
+.subtitle{
+    width:800px;
+    margin:0 auto;
+    color: #1b1b1b;
+    font-size:14pt;
+    text-align:center;
+}
+.content {
+    width:100%; /* Genel içerik genişliği */
+    margin: 0 auto; /* Sayfanın ortasında tut */
+    padding: 20px; /* İç boşluk */
+    
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .categories li {
+        width:400px;
+        height: 200px;
+        color: black;
+        background-image: url('../Images/categoriesBG.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box; /* Border’ı genişlik içine dahil et */
+        margin-bottom: 20px;
+    }
+        .categories li a {
+            color: #00E5FF;
+            font-size: 25pt;
+            font-weight:100;
+            padding-left: 10px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    color:
+}
+    .products a {
+        text-align:center;
+        width: 300px;
+        height: 400px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+.productImage img {
+    width:100%;
+    height:300px;
+    margin-bottom:15px;
+}
+.productName {
+    font-weight: bold;
+    color: #1b1b1b;
+}
+.productPrice {
+    font-weight: bold;
+    font-size:15pt;
+    color: #FF5722;
+}

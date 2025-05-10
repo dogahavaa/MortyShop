@@ -102,7 +102,10 @@
     <Content Include="Areas\AdminPanel\Assets\CSS\ManagerLoginCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\CSS\PanelCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\Icons\edit-icon.png" />
+    <Content Include="Assets\CSS\GeneralCSS.css" />
+    <Content Include="Assets\Images\Banner\Rick-and-Morty-Banner.jpg" />
     <Content Include="Assets\Images\BrandImages\noImage.png" />
+    <Content Include="Assets\Images\categoriesBG.jpg" />
     <Content Include="Assets\Images\mortyshop_logo.png" />
     <Content Include="Assets\Images\ProductImages\noImage.png" />
     <Content Include="Content\Site.css" />
@@ -120,12 +123,15 @@
     <Compile Include="Areas\AdminPanel\Data\ManagerLoginModel.cs" />
     <Compile Include="Areas\AdminPanel\Data\ProductCreateViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Filters\ManagerLoginRequiredFilterAttribute.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerRole.cs" />
     <Compile Include="Models\MortyShopDB.cs" />
@@ -157,7 +163,15 @@
     <Content Include="Areas\AdminPanel\Views\Product\AddVariant.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Product\Variants.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Product\VariantEdit.cshtml" />
+    <Content Include="Views\Shared\_MainCategories.cshtml" />
+    <Content Include="Views\Shared\_NewProducts.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_MonthlyPicks.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Shared\mainLayout.cshtml" />
+    <Content Include="Views\Shared\_DetailVariants.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

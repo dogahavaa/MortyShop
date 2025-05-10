@@ -1,0 +1,23 @@
+﻿@using MortyShop_MVC.Models
+@model Product
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/mainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="left">
+        <div class="bigImage">
+            <img src="~/Assets/Images/ProductImages/@Model.Image" />
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">@Model.Name</div>
+        <div class="detailPrice"></div>
+        <div class="size">
+
+        </div>
+    </div>
+</div>
+

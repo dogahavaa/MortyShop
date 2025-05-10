@@ -1,0 +1,15 @@
+﻿@using MortyShop_MVC.Models
+
+@{
+    MortyShopDB db = new MortyShopDB();
+    List<Category> mainCategories = db.Categories.Where(x => x.UpCategoryID == null && x.IsActive == true && x.IsDeleted == false).ToList();
+}
+
+
+
+    @foreach (Category item in mainCategories)
+    {
+        <li>
+            <a href="@Url.Action("Index","Home", new {categoryID = item.ID})">@item.Name</a>
+        </li>
+    }
