@@ -1,23 +1,66 @@
 ﻿@using MortyShop_MVC.Models
-@model Product
+@model DetailModel
 
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Product.Name;
     Layout = "~/Views/Shared/mainLayout.cshtml";
+    MortyShopDB db = new MortyShopDB();
 }
 
-<div class="container">
+<div class="container" style="margin-top:0">
     <div class="left">
         <div class="bigImage">
-            <img src="~/Assets/Images/ProductImages/@Model.Image" />
+            <img src="~/Assets/Images/ProductImages/@Model.Product.Image" />
         </div>
     </div>
     <div class="right">
-        <div class="title">@Model.Name</div>
-        <div class="detailPrice"></div>
-        <div class="size">
-
+        <div class="route">
+            <a href="@Url.Action("Index","Home")">Anasayfa</a> /
+            <a href="@Url.Action("Index","Category", new {categoryID = Model.Product.CategoryID})">@Model.Product.Category.Name</a> /
         </div>
+
+        <div class="row">
+            <div class="detailTitle">@Model.Product.Name</div>
+        </div>
+
+        <div class="row">
+            <div class="detailPrice">
+                <span class="fake">@(Convert.ToInt32(Model.Product.Price) * 1.1) ₺</span>
+                <span class="normal">@Model.Product.Price₺</span>
+            </div>
+        </div>
+        <span style="font-size:14pt; ">Beden</span><br />
+        @using (Html.BeginForm("Detail", "Product", FormMethod.Post))
+        {
+            <div class="variantContainer">
+                
+                @foreach (var item in Model.ProductVariants)
+                {
+                    <label class="variantBox">
+                        <input type="radio" name="selectedVariantId" value="@item.ID" class="radioButton" />
+                        <span class="variantValue">@item.Variant.VariantValue</span>
+                    </label>
+                }
+            </div>
+            <div class="row">
+                <div class="quantity-selector">
+                    <a href="@Url.Action("Detail", "Product", new { id = Model.Product.ID, quantity = ViewBag.Quantity > 1 ? ViewBag.Quantity - 1 : 1 })" class="quantity-btn">-</a>
+                    <span class="quantity-value">@(ViewBag.Quantity ?? 1)</span>
+                    <a href="@Url.Action("Detail", "Product", new { id = Model.Product.ID, quantity = ViewBag.Quantity < 99 ? (ViewBag.Quantity ?? 1) + 1 : 99 })" class="quantity-btn">+</a>
+                </div>
+            </div>
+        }
+
+        @*Sırada count ve sepete ekle var ordan devam et knks*@
+        @*knks önce üyelik girişi işlemlerini hallette gel*@
+
+
+
+
+
+
+        <div class="count"></div>
+        <div class="security"></div>
     </div>
 </div>
 

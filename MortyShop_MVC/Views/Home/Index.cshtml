@@ -4,6 +4,13 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+@if (TempData["message"] != null)
+{
+    <div class="container">
+        <label class="infoMessage">@TempData["message"]</label>
+    </div>
+}
+
 <div class="container" style="margin-top:0">
     <div class="title">
         Morty Shop – Hayranlar İçin Resmi Rick and Morty Ürünleri

@@ -23,6 +23,7 @@ namespace MortyShop_MVC.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         public string Image { get; set; }
+        public decimal PurchasePrice { get; set; }
         public decimal Price { get; set; }
         public int CategoryID { get; set; }
         [ForeignKey("CategoryID")]

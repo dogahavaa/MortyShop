@@ -2,12 +2,18 @@
     margin: 0;
     padding: 0px;
 }
+
 body {
     color: #1A237E;
     margin: 0;
     padding: 0;
     font-family: Poppins;
 }
+
+.row {
+    margin: 20px 0;
+}
+
 .topBar {
     background-color: #0D1B2A;
     display: flex;
@@ -17,22 +23,28 @@ body {
     height: 60px;
     margin: 0 auto;
 }
+
 .logo, .menu, .user {
     flex: 1; /* Her div’in genişliğini eşit tutar, ama hizalama justify-content ile kontrol edilir */
 }
+
 .logo {
     text-align: left;
 }
+
     .logo img {
         width: 150px;
         vertical-align: middle;
     }
+
 .user {
     text-align: right;
 }
+
 .menu {
     text-align: center;
 }
+
 .categoryList {
     list-style-type: none;
     display: flex;
@@ -41,6 +53,7 @@ body {
     font-style: normal;
     margin: 0 auto;
 }
+
     .categoryList li {
         margin-left: 70px;
     }
@@ -48,7 +61,7 @@ body {
         .categoryList li a {
             text-decoration: none;
             color: #F4F7FB;
-            font-size:18pt;
+            font-size: 18pt;
         }
 
             .categoryList li a:hover {
@@ -58,44 +71,54 @@ body {
 
 .mainContainer {
     margin: 30px auto;
-
     padding: 20px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
 .container {
     width: 100%; /* MainContainer’a göre tam genişlik */
     max-width: 1400px; /* Maksimum genişlik */
     margin: 100px auto;
-    
 }
-.title{
-    font-size:24pt;
-    font-weight:bold;
-    text-align:center;
+
+.title {
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
 }
-.subtitle{
-    width:800px;
-    margin:0 auto;
+
+.detailTitle {
+    color: #0D1B2A;
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: left;
+}
+
+.subtitle {
+    width: 800px;
+    margin: 0 auto;
     color: #1b1b1b;
-    font-size:14pt;
-    text-align:center;
+    font-size: 14pt;
+    text-align: center;
 }
+
 .content {
-    width:100%; /* Genel içerik genişliği */
+    width: 100%; /* Genel içerik genişliği */
     margin: 0 auto; /* Sayfanın ortasında tut */
     padding: 20px; /* İç boşluk */
-    
 }
+
 .categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
     box-sizing: border-box;
 }
+
     .categories li {
-        width:400px;
+        width: 400px;
         height: 200px;
         color: black;
         background-image: url('../Images/categoriesBG.jpg');
@@ -105,16 +128,18 @@ body {
         box-sizing: border-box; /* Border’ı genişlik içine dahil et */
         margin-bottom: 20px;
     }
+
         .categories li a {
             color: #00E5FF;
             font-size: 25pt;
-            font-weight:100;
+            font-weight: 100;
             padding-left: 10px;
             display: flex;
             width: 100%;
             height: 100%;
             text-decoration: none;
         }
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -123,8 +148,9 @@ body {
     box-sizing: border-box;
     color:
 }
+
     .products a {
-        text-align:center;
+        text-align: center;
         width: 300px;
         height: 400px;
         text-decoration: none;
@@ -133,17 +159,139 @@ body {
         background-color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
 .productImage img {
-    width:100%;
-    height:300px;
-    margin-bottom:15px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
 }
+
 .productName {
     font-weight: bold;
     color: #1b1b1b;
 }
+
 .productPrice {
     font-weight: bold;
-    font-size:15pt;
+    font-size: 15pt;
     color: #FF5722;
 }
+
+.left {
+    padding: 30px;
+    float: left;
+    width: 40%;
+}
+
+.right {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+.bigImage img {
+    width: 100%;
+}
+
+.fake {
+    font-size: 16pt;
+    color: #fe997a;
+    text-decoration: line-through;
+}
+
+.normal {
+    font-size: 20pt;
+    color: #FF5722;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+
+.route {
+    color: #808080;
+}
+
+    .route a {
+        color: #808080;
+    }
+
+        .route a:hover {
+            color: black;
+        }
+
+.box {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 10px;
+}
+
+.variantContainer{
+    margin:30px 0;
+}
+
+.variantBox {
+    border: 2px solid #CC4149;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 10px;
+    margin-top:20px;
+}
+    .variantBox:hover {
+        border: 2px solid #F8E753;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+.variantValue {
+    color: #CC4149;
+    font-size: 15pt;
+    font-weight: bold;
+}
+.radioButton{
+    appearance:none;
+}
+.radioButton:checked{
+    appearance:auto;
+}
+
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+    .quantity-btn:hover {
+        background-color: #f5f5f5;
+        text-decoration: none;
+        color: #333;
+    }
+
+.quantity-value {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0;
+}
+

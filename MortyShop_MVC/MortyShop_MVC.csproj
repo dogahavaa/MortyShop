@@ -108,6 +108,8 @@
     <Content Include="Assets\Images\categoriesBG.jpg" />
     <Content Include="Assets\Images\mortyshop_logo.png" />
     <Content Include="Assets\Images\ProductImages\noImage.png" />
+    <Content Include="Assets\Images\registerImage.jpg" />
+    <Content Include="Assets\Images\Rick-and-Morty-Rick-Sanchez-Scientist-Lifesize-Cardboard-Cutout-buy-now-at-starstills__27815.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -124,6 +126,7 @@
     <Compile Include="Areas\AdminPanel\Data\ProductCreateViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Filters\ManagerLoginRequiredFilterAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -131,13 +134,20 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\DetailModel.cs" />
+    <Compile Include="Models\FavoriteProduct.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerRole.cs" />
+    <Compile Include="Models\Member.cs" />
     <Compile Include="Models\MortyShopDB.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductReview.cs" />
     <Compile Include="Models\ProductVariant.cs" />
     <Compile Include="Models\Variant.cs" />
+    <Compile Include="Models\ViewedProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +181,9 @@
     <Content Include="Views\Shared\_MonthlyPicks.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Shared\mainLayout.cshtml" />
-    <Content Include="Views\Shared\_DetailVariants.cshtml" />
+    <Content Include="Views\Product\_DetailVariants.cshtml" />
+    <Content Include="Views\Member\Register.cshtml" />
+    <Content Include="Views\Member\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

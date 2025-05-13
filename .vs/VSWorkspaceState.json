@@ -9,8 +9,9 @@
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers",
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Views",
     "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Brand",
-    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product"
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product",
+    "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Shared"
   ],
-  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
+  "SelectedNode": "\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Shared\\_LayoutPage1.cshtml",
   "PreviewInSolutionExplorer": false
 }

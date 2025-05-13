@@ -2,54 +2,64 @@
     margin: 0;
     padding: 0px;
 }
+
 body {
     color: #2b4560;
     margin: 0;
     padding: 0;
     font-family: Poppins;
 }
+
 .pageTitle {
     color: #0D1B2A;
     text-align: center;
     border-bottom: 1px solid #F4F7FB;
     padding: 20px;
 }
+
 .container {
-    background-color:white;
-    margin:20px auto;
-    min-height:300px;
-    border-radius:10px;
+    background-color: white;
+    margin: 20px auto;
+    min-height: 300px;
+    border-radius: 10px;
 }
-.small{
-    width:600px;
+
+.small {
+    width: 600px;
 }
-.medium{
-    width:800px;
+
+.medium {
+    width: 800px;
 }
-.large{
-    width:1200px;
+
+.large {
+    width: 1200px;
 }
-.xlarge{
-    width:1550px;
+
+.xlarge {
+    width: 1550px;
 }
-.content{
-    padding:15px 40px;
+
+.content {
+    padding: 15px 40px;
 }
+
 .box {
     width: 100%;
-    border-radius:10px;
-    border:1px solid silver;
+    border-radius: 10px;
+    border: 1px solid silver;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 10px;
 }
-.row{
-    margin:15px 0;
+
+.row {
+    margin: 15px 0;
 }
 
 .formButton {
-    margin-top:20px;
+    margin-top: 20px;
     width: 100%;
     padding: 15px;
     color: white;
@@ -69,9 +79,11 @@ body {
         background-color: #F8E753;
         box-shadow: 0 0 10px #F8E753;
     }
+
 .warningMessage {
     color: #FF4444;
 }
+
 .infoMessage {
     color: #00E5FF;
 }
@@ -81,10 +93,12 @@ body {
     padding: 15px;
     border-radius: 10px;
 }
-.table tr td a {
-    float:left;
-    margin-left:9px;
-}
+
+    .table tr td a {
+        float: left;
+        margin-left: 9px;
+    }
+
     .table tr th {
         text-align: left;
         /*background-color: #f7f7f7;*/
@@ -93,31 +107,62 @@ body {
         color: #0D1B2A;
         font-size: 11pt;
     }
-        .table tr td {
-            border-bottom: 1px solid silver;
-            padding: 25px;
-        }
+
+    .table tr td {
+        border-bottom: 1px solid silver;
+        padding: 25px;
+    }
+
     .table tr:hover {
         background-color: #F6F7F9;
     }
-.logoArea{
-    width:100px;
+
+.logoArea {
+    width: 100px;
 }
-.left{
-    float:left;
-    width:300px;
+
+.left {
+    float: left;
+    width: 300px;
 }
+
 .right {
     float: left;
     width: 300px;
     margin-left: 75px;
 }
-.tdImage{
-    width:100px;
-    height:100px;
+
+.tdImage {
+    width: 100px;
+    height: 100px;
 }
+
 .fakePrice {
     color: dimgray;
     font-size: 11pt;
     text-decoration: line-through
+}
+
+.registerImage {
+    width: 100%;
+}
+
+.registerLeft {
+    padding-top: 30px;
+    width: 370px;
+    height: 600px;
+    float: left;
+    border-left: 2px solid #F6F7F9;
+    border-bottom: 2px solid #F6F7F9;
+    margin-bottom: 50px;
+}
+
+.registerRight {
+    padding: 15px 30px;
+    width: 360px;
+    height: 600px;
+    float: left;
+    border-left: 2px solid #F6F7F9;
+    border-bottom: 2px solid #F6F7F9;
+    border-right: 2px solid #F6F7F9;
 }

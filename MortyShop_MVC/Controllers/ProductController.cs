@@ -16,6 +16,11 @@ namespace MortyShop_MVC.Controllers
             return View();
         }
 
+        //public ActionResult _DetailVariants(int? id)
+        //{
+
+        //}
+
         [HttpGet]
         public ActionResult Details(int? id)
         {
@@ -28,7 +33,25 @@ namespace MortyShop_MVC.Controllers
             {
                 return RedirectToAction("NoProduct", "Product");
             }
-            return View(p);
+
+            DetailModel model = new DetailModel();
+            List<ProductVariant> ProductVariants = db.ProductVariants.Where(x => x.ProductID == p.ID).ToList();
+            List<SelectListItem> variants = new List<SelectListItem>();
+
+            foreach (ProductVariant item in ProductVariants)
+            {
+                variants.Add(
+                    new SelectListItem 
+                    {
+                        Value = item.Variant.ID.ToString(), 
+                        Text = item.Variant.VariantValue }
+                    );
+            }
+
+            ViewBag.Variants = variants;
+            model.ProductVariants = ProductVariants;
+            model.Product = p;
+            return View(model);
         }
     }
 }

@@ -1,0 +1,70 @@
+﻿@model MortyShop_MVC.Models.Member
+@{
+    ViewBag.Title = "Mortyshop - Üye Ol";
+    Layout = "~/Views/Shared/mainLayout.cshtml";
+}
+
+@section styles{
+    <link href="~/Areas/AdminPanel/Assets/CSS/FormCSS.css" rel="stylesheet" />
+}
+<div class="container medium register">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="pageTitle">
+            <h2>Üyelik İşlemleri</h2>
+        </div>
+
+
+        <div class="registerLeft">
+            <img src="~/Assets/Images/Rick-and-Morty-Rick-Sanchez-Scientist-Lifesize-Cardboard-Cutout-buy-now-at-starstills__27815.jpg" class="registerImage" />
+        </div>
+        <div class="registerRight">
+            @if (ViewBag.message != null)
+            {
+                <label class="warningMessage">@ViewBag.message</label>
+            }
+            <div class="row">
+                Ad
+                @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Name, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                Soyad
+                @Html.EditorFor(x => x.Surname, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Surname, "", new { @class = "warningMessage" })
+            </div>
+            <div class="row">
+                Email
+                @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Email, "", new { @class = "warningMessage" })
+            </div>
+            <div class="row">
+                Şifre
+                @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Password, "", new { @class = "warningMessage" })
+            </div>
+            <div class="row">
+                Telefon Numarası
+                @Html.EditorFor(x => x.Phone, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.Phone, "", new { @class = "warningMessage" })
+            </div>
+            <div class="row">
+                Şehir
+                @Html.EditorFor(x => x.City, new { htmlAttributes = new { @class = "box" } })
+                @Html.ValidationMessageFor(x => x.City, "", new { @class = "warningMessage" })
+            </div>
+
+            <div class="row">
+                <button type="submit" class="formButton">Üye Ol</button>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+
+    }
+</div>
+

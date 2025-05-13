@@ -57,7 +57,12 @@
             </div>
 
             <div class="row">
-                Fiyat
+                Alış Fiyatı
+                @Html.EditorFor(x => x.PurchasePrice, new { htmlAttributes = new { @class = "box" } })
+            </div>
+
+            <div class="row">
+                Satış Fiyatı
                 @Html.EditorFor(x => x.Price, new { htmlAttributes = new { @class = "box" } })
             </div>
 
