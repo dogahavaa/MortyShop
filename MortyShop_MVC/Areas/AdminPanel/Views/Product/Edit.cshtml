@@ -67,6 +67,11 @@
             </div>
 
             <div class="row">
+                @Html.EditorFor(x => x.MonthlyPick, new { htmlAttributes = new { @id = "isActive" } })
+                <label for="isActive"> Ayın Ürünü</label>
+            </div>
+
+            <div class="row">
                 @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })
                 <label for="isActive"> Aktif Ürün</label>
             </div>

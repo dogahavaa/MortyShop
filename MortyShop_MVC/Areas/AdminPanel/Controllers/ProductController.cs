@@ -155,6 +155,15 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
                         ViewBag.message = "Eklenebilir dosya uzantısı sadece .jpg, .jpeg veya .png olabilir.";
                     }
                 }
+                else
+                {
+                    // Eğer yeni resim seçilmemişse, mevcut ürünün resmini al
+                    var existingProduct = db.Products.Find(p.ID);
+                    if (existingProduct != null)
+                    {
+                        p.Image = existingProduct.Image;
+                    }
+                }
 
                 if (isvalidimage)
                 {

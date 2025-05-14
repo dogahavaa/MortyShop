@@ -125,6 +125,7 @@
     <Compile Include="Areas\AdminPanel\Data\ManagerLoginModel.cs" />
     <Compile Include="Areas\AdminPanel\Data\ProductCreateViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Filters\ManagerLoginRequiredFilterAttribute.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -133,6 +134,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DetailModel.cs" />
     <Compile Include="Models\FavoriteProduct.cs" />
@@ -193,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Cart\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

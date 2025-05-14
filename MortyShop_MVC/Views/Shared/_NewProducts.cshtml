@@ -2,7 +2,7 @@
 
 @{
     MortyShopDB db = new MortyShopDB();
-    List<Product> products = db.Products.Where(x => x.IsActive == true && x.IsDeleted == false && x.MonthlyPick == false).OrderBy(x => x.CreationTime).Take(4).ToList();
+    List<Product> products = db.Products.Where(x => x.IsActive == true && x.IsDeleted == false).OrderBy(x => x.CreationTime).Take(4).ToList();
 }
 
 @foreach (Product item in products)

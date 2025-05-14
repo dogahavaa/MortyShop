@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\areas\\adminpanel\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\areas\\adminpanel\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\areas\\adminpanel\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\areas\\adminpanel\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\areas\\adminpanel\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\areas\\adminpanel\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\views\\shared\\_newproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\views\\shared\\_newproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\views\\shared\\_monthlypicks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\views\\shared\\_monthlypicks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|c:\\users\\asus\\documents\\github\\mortyshop\\mortyshop_mvc\\views\\member\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0BA2E22-AD7C-49C7-8224-7529196CE3CD}|MortyShop_MVC\\MortyShop_MVC.csproj|solutionrelative:mortyshop_mvc\\views\\member\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 228,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_NewProducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Shared\\_NewProducts.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Views\\Shared\\_NewProducts.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Shared\\_NewProducts.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Views\\Shared\\_NewProducts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:30:10.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_MonthlyPicks.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Shared\\_MonthlyPicks.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Views\\Shared\\_MonthlyPicks.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Shared\\_MonthlyPicks.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Views\\Shared\\_MonthlyPicks.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:30:00.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:29:43.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "MortyShop_MVC\\Areas\\AdminPanel\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAkwKQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:26:46.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Areas\\AdminPanel\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:26:15.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:20:43.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Controllers\\CartController.cs",
+              "RelativeToolTip": "MortyShop_MVC\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAD4vxMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:20:02.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Models\\Cart.cs",
+              "RelativeToolTip": "MortyShop_MVC\\Models\\Cart.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwA4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:17:21.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Member\\Login.cshtml",
+              "RelativeDocumentMoniker": "MortyShop_MVC\\Views\\Member\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\MortyShop\\MortyShop_MVC\\Views\\Member\\Login.cshtml",
+              "RelativeToolTip": "MortyShop_MVC\\Views\\Member\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T12:16:48.994Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
