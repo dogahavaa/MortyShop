@@ -156,6 +156,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductReview.cs" />
     <Compile Include="Models\ProductVariant.cs" />
+    <Compile Include="Models\TempProduct.cs" />
     <Compile Include="Models\Variant.cs" />
     <Compile Include="Models\ViewedProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

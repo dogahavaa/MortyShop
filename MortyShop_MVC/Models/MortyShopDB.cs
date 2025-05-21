@@ -27,6 +27,7 @@ namespace MortyShop_MVC.Models
         public DbSet<ProductReview> ProductReviews { get; set; }
         public DbSet<ViewedProduct> ViewedProducts { get; set; }
         public DbSet<Cart> Carts { get; set; }
+        public DbSet<TempProduct> TempProducts { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
