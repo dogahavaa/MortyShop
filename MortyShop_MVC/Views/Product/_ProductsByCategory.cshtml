@@ -1,0 +1,26 @@
+﻿@using MortyShop_MVC.Models
+@model IEnumerable<Product>
+
+
+
+<div class="related-products">
+    <h3>Bu Kategorideki Diğer Ürünler</h3>
+    <div class="product-grid">
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+                <a href="@Url.Action("Details", "Product", new { id = product.ID })">
+                    <div class="product-image">
+                        <img src="~/Assets/Images/ProductImages/@product.Image" alt="@product.Name" />
+                    </div>
+                    <div class="product-info">
+                        <h4>@product.Name</h4>
+                        <p class="price">@product.Price.ToString("C")</p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+

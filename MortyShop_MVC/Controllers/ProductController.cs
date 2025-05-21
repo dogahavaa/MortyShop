@@ -53,5 +53,24 @@ namespace MortyShop_MVC.Controllers
             model.Product = p;
             return View(model);
         }
+
+        public ActionResult _ProductsByCategory(int? id, int? count = null)
+        {
+            if (id == null)
+            {
+                return null;
+            }
+            var query = db.Products.Where(x => x.CategoryID == id && x.IsDeleted == false && x.IsActive);
+
+            if (count != null)
+            {
+                query = query.Take(count.Value);
+            }
+
+            List<Product> products = query.ToList();
+            return PartialView(products);
+        }
+
+        
     }
 }

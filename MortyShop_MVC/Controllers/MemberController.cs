@@ -52,36 +52,36 @@ namespace MortyShop_MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string email, string password)
+        public ActionResult Login(MemberLoginViewModel model)
         {
-            if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(password))
+            if (ModelState.IsValid)
             {
-                ViewBag.message = "E-posta ve şifre alanları zorunludur.";
-            }
-
-            Member m = db.Members.FirstOrDefault(x => x.Email == email && x.Password == password);
-            if (m != null)
-            {
-                if (m.IsDeleted)
+                Member m = db.Members.FirstOrDefault(x => x.Email == model.Mail && x.Password == model.Password);
+                if (m != null)
                 {
-                    ViewBag.message = "Hesabınız silinmiş.";
-                    return View();
+                    if (m.IsDeleted)
+                    {
+                        ViewBag.message = "Hesabınız silinmiş.";
+                        return View();
+                    }
+                    if (!m.IsActive)
+                    {
+                        ViewBag.message = "Hesabınız askıya alınmıştır.";
+                        return View();
+                    }
+
+                    Session["Member"] = m;
+
+                    m.LastLoginDate = DateTime.Now;
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index", "Home");
                 }
-                if (!m.IsActive)
-                {
-                    ViewBag.message = "Hesabınız askıya alınmıştır.";
-                    return View();
-                }
-
-                Session["Member"] = m;
-
-                m.LastLoginDate = DateTime.Now;
-                db.SaveChanges();
-
-                return RedirectToAction("Index", "Home");
+                ViewBag.message = "E-posta veya şifre hatalı.";
+                return View();
             }
-            ViewBag.message = "E-posta veya şifre hatalı.";
             return View();
+
         }
 
         public ActionResult Logout()

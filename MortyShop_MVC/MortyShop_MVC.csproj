@@ -99,10 +99,13 @@
   <ItemGroup>
     <Content Include="Areas\AdminPanel\Assets\CSS\Colors.css" />
     <Content Include="Areas\AdminPanel\Assets\CSS\FormCSS.css" />
+    <Content Include="Areas\AdminPanel\Assets\CSS\HomeCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\CSS\ManagerLoginCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\CSS\PanelCSS.css" />
     <Content Include="Areas\AdminPanel\Assets\Icons\edit-icon.png" />
+    <Content Include="Assets\CSS\CategoryCSS.css" />
     <Content Include="Assets\CSS\GeneralCSS.css" />
+    <Content Include="Assets\CSS\LoginCSS.css" />
     <Content Include="Assets\Images\Banner\Rick-and-Morty-Banner.jpg" />
     <Content Include="Assets\Images\BrandImages\noImage.png" />
     <Content Include="Assets\Images\categoriesBG.jpg" />
@@ -110,6 +113,7 @@
     <Content Include="Assets\Images\ProductImages\noImage.png" />
     <Content Include="Assets\Images\registerImage.jpg" />
     <Content Include="Assets\Images\Rick-and-Morty-Rick-Sanchez-Scientist-Lifesize-Cardboard-Cutout-buy-now-at-starstills__27815.jpg" />
+    <Content Include="Assets\Images\trust-symbols_a-2.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -125,7 +129,9 @@
     <Compile Include="Areas\AdminPanel\Data\ManagerLoginModel.cs" />
     <Compile Include="Areas\AdminPanel\Data\ProductCreateViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Filters\ManagerLoginRequiredFilterAttribute.cs" />
+    <Compile Include="Areas\AdminPanel\Services\XMLProductService.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -136,12 +142,14 @@
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Models\DetailModel.cs" />
     <Compile Include="Models\FavoriteProduct.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerRole.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberLoginViewModel.cs" />
     <Compile Include="Models\MortyShopDB.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
@@ -186,6 +194,8 @@
     <Content Include="Views\Product\_DetailVariants.cshtml" />
     <Content Include="Views\Member\Register.cshtml" />
     <Content Include="Views\Member\Login.cshtml" />
+    <Content Include="Views\Product\_ProductsByCategory.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

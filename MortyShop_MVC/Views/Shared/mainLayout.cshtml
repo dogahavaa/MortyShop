@@ -2,9 +2,11 @@
 
 <html>
 <head>
+    @using MortyShop_MVC.Models
     <meta name="viewport" content="width=device-width" />
     <title>Morty Shop - @ViewBag.Title</title>
     <link href="~/Assets/CSS/GeneralCSS.css" rel="stylesheet" />
+    <link href="~/Assets/CSS/CategoryCSS.css" rel="stylesheet" />
     @RenderSection("styles", false)
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +22,35 @@
                 @Html.Partial("_MainCategories")
             </ul>
         </div>
-        <div class="user">asdas</div>
+        @{ 
+            MortyShopDB db = new MortyShopDB();
+            Member m = (Member)Session["Member"];
+        }
+        <div class="user">
+            @if (m != null)
+            {
+                <div class="user-info">
+                    <a href="@Url.Action("Profile", "Member")" class="user-name">
+                        @m.Name
+                    </a>
+                    <a href="@Url.Action("Logout", "Member")" class="logout-btn">
+                        Çıkış Yap
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="auth-buttons">
+                    <a href="@Url.Action("Login", "Member")" class="login-btn">
+                        Giriş Yap
+                    </a>
+                    <a href="@Url.Action("Register", "Member")" class="register-btn">
+                        Üye Ol
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
     </div>
     <div class="clearfix"></div>
     <div class="mainContainer">

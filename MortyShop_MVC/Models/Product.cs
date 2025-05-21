@@ -35,6 +35,7 @@ namespace MortyShop_MVC.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-mm-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CreationTime { get; set; }
+        public DateTime UpdateTime { get; set; }
 
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;

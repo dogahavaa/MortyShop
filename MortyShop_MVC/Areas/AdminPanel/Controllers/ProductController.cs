@@ -158,7 +158,7 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
                 else
                 {
                     // Eğer yeni resim seçilmemişse, mevcut ürünün resmini al
-                    var existingProduct = db.Products.Find(p.ID);
+                    Product existingProduct = db.Products.Find(p.ID);
                     if (existingProduct != null)
                     {
                         p.Image = existingProduct.Image;
@@ -167,11 +167,25 @@ namespace MortyShop_MVC.Areas.AdminPanel.Controllers
 
                 if (isvalidimage)
                 {
-                    db.Entry(p).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
+                    Product existingProduct = db.Products.Find(p.ID);
+                    if (existingProduct != null)
+                    {
+                        // Mevcut ürünün özelliklerini güncelle
+                        existingProduct.Name = p.Name;
+                        existingProduct.BarcodeNo = p.BarcodeNo;
+                        existingProduct.Description = p.Description;
+                        existingProduct.Image = p.Image;
+                        existingProduct.PurchasePrice = p.PurchasePrice;
+                        existingProduct.Price = p.Price;
+                        existingProduct.CategoryID = p.CategoryID;
+                        existingProduct.BrandID = p.BrandID;
+                        existingProduct.IsActive = p.IsActive;
+                        existingProduct.MonthlyPick = p.MonthlyPick;
 
-                    TempData["message"] = "Ürün düzenlemesi başarılı";
-                    return RedirectToAction("Index", "Product");
+                        db.SaveChanges();
+                        TempData["message"] = "Ürün düzenlemesi başarılı";
+                        return RedirectToAction("Index", "Product");
+                    }
                 }
             }
             ViewBag.CategoryID = new SelectList(db.Categories.Where(x => x.IsActive == true && x.IsDeleted == false), "ID", "Name");

@@ -2,7 +2,84 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Areas/AdminPanel/Assets/CSS/HomeCSS.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 }
 
-<h2>Index</h2>
 
+<div class="admin-container">
+    <!-- Ürün Kartı -->
+    <a href="@Url.Action("Index", "Product")">
+        <div class="admin-card">
+            <div class="card-icon">
+                <i class="fas fa-box"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Toplam Ürün</h3>
+                <div class="card-value">150</div>
+                <div class="card-footer">
+                    <span class="trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        12%
+                    </span>
+                    <span class="period">Tüm Zamanlar</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Index", "Category")">
+        <!-- Kategori Kartı -->
+        <div class="admin-card">
+            <div class="card-icon">
+                <i class="fas fa-tags"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Toplam Kategori</h3>
+                <div class="card-value">12</div>
+                <div class="card-footer">
+                    <span class="trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        5%
+                    </span>
+                    <span class="period">Tüm Zamanlar</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <!-- Adet Satış Kartı -->
+    <div class="admin-card">
+        <div class="card-icon">
+            <i class="fas fa-tags"></i>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Adet Satış</h3>
+            <div class="card-value">12</div>
+            <div class="card-footer">
+                <span class="trend up">
+                    <i class="fas fa-arrow-up"></i>
+                    5%
+                </span>
+                <span class="period">Tüm Zamanlar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kazanç Kartı -->
+    <div class="admin-card">
+        <div class="card-icon">
+            <i class="fas fa-tags"></i>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Kazanç</h3>
+            <div class="card-value">12</div>
+            <div class="card-footer">
+                <span class="trend up">
+                    <i class="fas fa-arrow-up"></i>
+                    5%
+                </span>
+                <span class="period">Son 30 gün</span>
+            </div>
+        </div>
+    </div>
+</div>

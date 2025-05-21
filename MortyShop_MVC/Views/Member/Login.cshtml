@@ -1,8 +1,45 @@
-﻿
+﻿@model MortyShop_MVC.Models.MemberLoginViewModel
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/mainLayout.cshtml";
+    <link href="~/Assets/CSS/LoginCSS.css" rel="stylesheet" />
 }
 
-<h2>Login</h2>
 
+
+<div class="container small">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="pageTitle">
+            <h2>Üye Girişi</h2>
+        </div>
+        <div class="content">
+            @if (ViewBag.message != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.message
+                </div>
+            }
+            <div class="form-group">
+                E-posta Adresi
+                @Html.TextBoxFor(m => m.Mail, new { @class = "form-control", placeholder = "ornek@email.com" })
+                @Html.ValidationMessageFor(m => m.Mail, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                Şifre
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Şifrenizi giriniz" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            </div>
+
+            <div class="form-footer">
+                <p>Hesabınız yok mu? <a href="@Url.Action("Register", "Member")">Üye Ol</a></p>
+            </div>
+        </div>
+    }
+</div>

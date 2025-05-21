@@ -10,6 +10,6 @@
     @foreach (Category item in mainCategories)
     {
         <li>
-            <a href="@Url.Action("Index","Home", new {categoryID = item.ID})">@item.Name</a>
+            <a href="@Url.Action("Index","Category", new {categoryID = item.ID})">@item.Name</a>
         </li>
     }

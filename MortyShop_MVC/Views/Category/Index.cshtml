@@ -1,0 +1,50 @@
+﻿@model MortyShop_MVC.Models.CategoryViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/mainLayout.cshtml";
+    <link href="~/Assets/CSS/CategoryCSS.css" rel="stylesheet" />
+    <link href="~/Assets/CSS/GeneralCSS.css" rel="stylesheet" />
+}
+
+
+<div class="categoryContainer category-page">
+    <div class="category-sidebar">
+        <h3>@Model.MainCategory.Name</h3>
+        @if (Model.SubCategories.Count > 0)
+        {
+            <ul class="subcategories">
+                @foreach (var subCategory in Model.SubCategories)
+                {
+                    <li>
+                        <a href="@Url.Action("Index", "Category", new {categoryID = subCategory.ID})">@subCategory.Name</a>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="category-content">
+        <div class="category-header">
+            <h2>@Model.MainCategory.Name</h2>
+        </div>
+
+        <div class="product-grid">
+            @foreach (var product in Model.Products)
+            {
+                <div class="product-card">
+                    <a href="@Url.Action("Details","Product", new { id = product.ID})">
+                        <div class="product-image">
+                            <img src="~/Assets/Images/ProductImages/@product.Image" />
+                        </div>
+                        <div class="product-info">
+                            <h4>@product.Name</h4>
+                            <div class="price-container">
+                                <span class="fake-price">@(Convert.ToInt32(product.Price) * 1.1) ₺</span>
+                                <span class="price">@product.Price ₺</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

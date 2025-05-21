@@ -7,7 +7,7 @@
     MortyShopDB db = new MortyShopDB();
 }
 
-<div class="container" style="margin-top:0">
+<div class="container" style="margin-top:-50px">
     <div class="left">
         <div class="bigImage">
             <img src="~/Assets/Images/ProductImages/@Model.Product.Image" />
@@ -30,10 +30,10 @@
             </div>
         </div>
         <span style="font-size:14pt; ">Beden</span><br />
-        @using (Html.BeginForm("Detail", "Product", FormMethod.Post))
+        @using (Html.BeginForm("AddFromDetail", "Cart", FormMethod.Post))
         {
             <div class="variantContainer">
-                
+
                 @foreach (var item in Model.ProductVariants)
                 {
                     <label class="variantBox">
@@ -42,25 +42,26 @@
                     </label>
                 }
             </div>
-            <div class="row">
+            <div class="row" style="margin-top:20px;">
+                Adet
                 <div class="quantity-selector">
-                    <a href="@Url.Action("Detail", "Product", new { id = Model.Product.ID, quantity = ViewBag.Quantity > 1 ? ViewBag.Quantity - 1 : 1 })" class="quantity-btn">-</a>
-                    <span class="quantity-value">@(ViewBag.Quantity ?? 1)</span>
-                    <a href="@Url.Action("Detail", "Product", new { id = Model.Product.ID, quantity = ViewBag.Quantity < 99 ? (ViewBag.Quantity ?? 1) + 1 : 99 })" class="quantity-btn">+</a>
+                    <input type="number" id="quantity" class="quantityValue" value="1" />
+
                 </div>
+                <input type="submit" class="addCartButton" value="Sepete Ekle" />
+            </div>
+            <div class="row">
+                <img src="~/Assets/Images/trust-symbols_a-2.jpg" style="height:73px;" />
             </div>
         }
-
-        @*Sırada count ve sepete ekle var ordan devam et knks*@
-        @*knks önce üyelik girişi işlemlerini hallette gel*@
-
-
-
-
-
-
-        <div class="count"></div>
-        <div class="security"></div>
     </div>
+    <div class="clearfix"></div>
+
+
+    @Html.Action("_ProductsByCategory", "Product", new { id = Model.Product.CategoryID, count = 4 })
+
+
+
+
 </div>
 
