@@ -84,3 +84,34 @@
     </div>
 </div>
 
+<div class="admin-container">
+    <div class="admin-card">
+        <div class="card-content">
+            <h3 class="card-title">Yeni ve Güncellenmiş</h3>
+            <div class="card-value">@*@(ViewBag.NewProducts.Count + ViewBag.UpdatedProducts.Count)*@</div>
+            <div class="card-footer">
+                <span class="trend up">
+                    <i class="fas fa-arrow-up"></i>
+                    Bekleyen Ürünler
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="card-icon">
+            <i class="fas fa-trash"></i>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Silinecek</h3>
+            <div class="card-value">@*@ViewBag.DeletedProducts.Count*@</div>
+            <div class="card-footer">
+                <span class="trend down">
+                    <i class="fas fa-arrow-down"></i>
+                    Silinecek Ürünler
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
